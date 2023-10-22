@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const utils = require('./utils/generateMarkdown')
+const util = require('util');
+const generatorMarkdown = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -9,13 +10,13 @@ const questions = [
         type: 'input',
         message: 'What is your project titled?',
         name: 'title',
-        default: 'Working Title',
+        validate:(value)=>{if(value){return true} else {return 'Input required'}}
     },
     {
         type: 'input',
         message: 'Project description?',
         name: 'description',
-        default: 'Working Description',
+        validate:(value)=>{if(value){return true} else {return 'Input required'}}
     },
     {
         type: 'input',
@@ -47,12 +48,26 @@ const questions = [
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
         name: 'license',
         default: 'No License Required',
-    }
+    },
+    {
+        type: 'input',
+        message: 'GitHub Username:',
+        name: 'github',
+        validate:(value)=>{if(value){return true} else {return 'Input required'}}
+    },
+    {
+        type: 'input',
+        message: 'E-mail:',
+        name: 'email',
+        validate:(value)=>{if(value){return true} else {return 'Input required'}}
+    },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, JSON.stringify(data, null, '\t'), err => {
+        console.log(fileName)
+        console.log(data)
        err? console.log(err) : console.log('sucess!')
     });
 }
@@ -60,7 +75,13 @@ function writeToFile(fileName, data) {
 
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then(function(data) {
+        writeToFile("README.md". generatorMarkdown(data));
+        console.log(data)
+    })
+}
 
 // Function call to initialize app
 init();
