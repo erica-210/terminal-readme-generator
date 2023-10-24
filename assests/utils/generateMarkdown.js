@@ -26,37 +26,53 @@ function generateMarkdown(data) {
   if (data.tests !== '') { tableOfContents += `
   * [Tests](#tests)` };
 
+  if (data.license !== '') { tableOfContents += `
+  * [License](#license)` };
+
+  if (data.contact !== '') { tableOfContents += `
+  * [Contact](#contact)` };
+
+
   return `
-    # ${data.title},
+# ${data.title}
 
-    ## Description
+## Description
 
-      ${data.description},
+${data.description}
 
-    ## Installation
+## Table of Contents
 
-      ${data.installation},
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Contributing](#contributing)
+4. [Tests](#tests)
+5. [License](#license)
+6. [Contact](#Contact)
 
-    ## Usage
+## Installation
 
-      ${data.usage},
+${data.installation}
 
-    ## Contributing
+## Usage
 
-      ${data.contributing},
+${data.usage}
 
-    ## Tests
+## Contributing
 
-      ${data.tests},
+${data.contributing}
 
-    ## License
+## Tests
 
-      ${data.license},
+${data.tests}
 
-    ## Contact Info:
+## License
 
-      ${data.github},
-      ${data.email},
+${data.license}
+
+## Contact:
+
+${data.github}
+${data.email}
 `;
 }
 

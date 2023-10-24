@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+
 const util = require('util');
 const generatorMarkdown = require('./utils/generateMarkdown')
 
@@ -22,7 +23,7 @@ const questions = [
         type: 'input',
         message: 'What, if any, installation steps does the project require?',
         name: 'installation',
-        default: 'No Installation Rquired',
+        default: 'No Installation Required',
     },
     {
         type: 'input',
@@ -65,9 +66,13 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, JSON.stringify(data, null, '\t'), err => {
-        console.log(fileName)
-        console.log(data)
+    console.log(data);
+   //console.log(typeof(data)); 
+
+    //console.log(JSON.stringify(data, null, '\t'));
+    fs.writeFile(fileName, data, err => {
+       // console.log(fileName)
+        //console.log(data)
        err? console.log(err) : console.log('sucess!')
     });
 }
@@ -78,8 +83,8 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(function(data) {
-        writeToFile("README.md". generatorMarkdown(data));
-        console.log(data)
+        writeToFile("README.md", generatorMarkdown(data));
+       // console.log(data)
     })
 }
 
