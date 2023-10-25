@@ -46,7 +46,7 @@ const questions = [
     {
         type: 'list',
         message: 'Project license?',
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla', 'Apache', 'MIT License', 'Boost', 'The Unlicense'],
         name: 'license',
         default: 'No License Required',
     },
@@ -66,7 +66,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    console.log(data);
+    //console.log(data);
    //console.log(typeof(data)); 
 
     //console.log(JSON.stringify(data, null, '\t'));

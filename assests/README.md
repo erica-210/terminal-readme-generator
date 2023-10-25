@@ -1,9 +1,9 @@
 
-# here
+# here  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 
 ## Description
 
-here
+fir
 
 ## Table of Contents
 
@@ -16,11 +16,11 @@ here
 
 ## Installation
 
-No Installation Required
+the
 
 ## Usage
 
-No Usage Applicable
+tea
 
 ## Contributing
 
@@ -32,9 +32,9 @@ No Tests Needed
 
 ## License
 
-GNU AGPLv3
+Apache 
 
 ## Contact:
 
 here
-here
+now
