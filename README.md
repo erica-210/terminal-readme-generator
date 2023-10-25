@@ -38,6 +38,11 @@ Tutoring:
 
 John Coakley
 
+## Contributers
+
+Xander: https://github.com/Xandromus
+
+Grace Choi: https://github.com/gachoi06
     
 ## License
 
