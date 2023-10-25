@@ -14,12 +14,7 @@ GitHub Repository: https://github.com/erica-210/terminal-readme-generator
 
 Portfolio: https://erica-210.github.io/Advanced-CSS-Challenge/
 
-Webpage: 
-
-![screencastify walkthrough](https://user-images.githubusercontent.com/58986949/115314310-805b2780-a1a7-11eb-8558-648a367ea231.mp4)
-<figure class="video_container">
-  <iframe src="https://user-images.githubusercontent.com/58986949/115314310-805b2780-a1a7-11eb-8558-648a367ea231.mp4" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+![README generator demo](./assests/media/generator-gif.gif)
 
 ## Credits
 

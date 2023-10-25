@@ -1,9 +1,9 @@
 
-# here  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
+# Readme Generator  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 ## Description
 
-fir
+creating a readme file using Markdown
 
 ## Table of Contents
 
@@ -16,25 +16,26 @@ fir
 
 ## Installation
 
-the
+No Installation Required
 
 ## Usage
 
-tea
+No Usage Applicable
 
 ## Contributing
 
-No contributions Necessary
+No Contributions Required
 
 ## Tests
 
-No Tests Needed
+No Tests Required
 
 ## License
 
-Apache 
+Licensed under: MIT 
 
 ## Contact:
 
-here
-now
+Github: erica-210
+
+E-mail: ericasanmiguel5@gmail.com

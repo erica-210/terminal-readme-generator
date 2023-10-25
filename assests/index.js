@@ -35,18 +35,18 @@ const questions = [
         type: 'input',
         message: 'What can other developers do to contribute to the project?',
         name: 'contributing',
-        default: 'No contributions Necessary',
+        default: 'No Contributions Required',
     },
     {
         type: 'input',
         message: 'What tests, if any, have been run and give examples?',
         name: 'tests',
-        default: 'No Tests Needed',
+        default: 'No Tests Required',
     },
     {
         type: 'list',
         message: 'Project license?',
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla', 'Apache', 'MIT License', 'Boost', 'The Unlicense'],
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla', 'Apache', 'MIT', 'Boost', 'The Unlicense'],
         name: 'license',
         default: 'No License Required',
     },
@@ -69,7 +69,6 @@ function writeToFile(fileName, data) {
     //console.log(data);
    //console.log(typeof(data)); 
 
-    //console.log(JSON.stringify(data, null, '\t'));
     fs.writeFile(fileName, data, err => {
        // console.log(fileName)
         //console.log(data)
